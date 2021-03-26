@@ -1,5 +1,5 @@
 # linux-setup
-My linux setup including vim config etc.
+My linux setup including vim config (based on [this](https://github.com/ny64/vim-setup)) etc.
 
 ## installing zsh
     sudo apt-get install zsh
