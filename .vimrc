@@ -87,3 +87,5 @@ map <F10> :q<CR>
 " Find string in files:
 "[:vim foo **/*.js | copen]
 
+map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
+map <F7> :w <CR> :!g++ % -o %< && ./%< <CR>
