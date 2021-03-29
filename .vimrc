@@ -34,6 +34,9 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+" leaving easier by pressing j and k at the same time
+inoremap jk <esc>
+inoremap kj <esc>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
 " Skipping over closing brackets and quotes
