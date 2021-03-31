@@ -12,5 +12,5 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 ## copy setup from this repo
     git clone https://github.com/larsaars/linux-setup.git
     cp -r linux-setup/* ./
-## installing nerd tree (in vim)
+## installing plugins (in vim)
      :PlugInstall
