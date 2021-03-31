@@ -29,7 +29,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 * press f6 to compile and execute with gcc
 * press f7 to compile and execute with g++
 * press f8 and s-f8 to switch style
-* press f9 to toggle tree (open multiple tabs with `t`)
+* press f9 to toggle tree (open multiple tabs with `t` and switch between them with `gt` and `gT`)
 * press f10 to `:q!`
 * press `jk` at the same time in insert mode to exit it
 * auto indent and bracket replacement
