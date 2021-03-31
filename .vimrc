@@ -1,11 +1,17 @@
-"" Syntax highlighting
+" Syntax highlighting
 syntax on
+" auto indent etc
+set autoindent
+" when using >> or << commands, shift lines by 4 spaces
+set shiftwidth=4
+" show a visual line under the cursors current line
+set cursorline
 
 " Lightline settings
 set laststatus=2
 let g:lightline = {
-    \ 'colorscheme': 'PaperColor'
-    \ }
+            \ 'colorscheme': 'PaperColor'
+            \ }
 
 " Colorscheme
 colorscheme one
@@ -85,10 +91,14 @@ call plug#end()
 " Settings 
 map <F9> :NERDTreeToggle<CR>
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
-map <F10> :q<CR>
+map <F10> :q!<CR>
 "" Notes
 " Find string in files:
 "[:vim foo **/*.js | copen]
 
+" compile g++ and gcc on f7 and f6
 map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
 map <F7> :w <CR> :!g++ % -o %< && ./%< <CR>
+
+" auto-format file on f6
+map <F6> gg=G <CR>
