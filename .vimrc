@@ -7,6 +7,9 @@ set shiftwidth=4
 " show a visual line under the cursors current line
 set cursorline
 
+" autoread files if reloaded (by versioncontrol for example)
+set autoread
+
 " Lightline settings
 set laststatus=2
 let g:lightline = {
@@ -88,9 +91,15 @@ Plug 'preservim/nerdtree' |
 Plug 'ap/vim-css-color'
 call plug#end()
 
-" Settings 
+" every c and cpp file will be formatted by the program clang-format
+" (installed)
+autocmd FileType c,cpp setlocal equalprg=clang-format
+
+" toggle nerd tree on fß click 
 map <F9> :NERDTreeToggle<CR>
+" autocomplete
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
+" quit with override on pressing f10
 map <F10> :q!<CR>
 "" Notes
 " Find string in files:
@@ -100,5 +109,5 @@ map <F10> :q!<CR>
 map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
 map <F7> :w <CR> :!g++ % -o %< && ./%< <CR>
 
-" auto-format file on f6
-map <F6> gg=G <CR>
+" autoformat code on pressing f5 for any language
+map <F5> gg=G <CR> 
