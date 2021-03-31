@@ -10,7 +10,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 ## installing powerlevel10k
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ## installing external language beautifiers (for vim)
-> Note: apt-get package manager can be replaced with yours
+> Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
 ### for c and c++
     sudo apt-get install clang-format
 ## copy setup from this repo
