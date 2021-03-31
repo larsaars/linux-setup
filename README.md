@@ -9,6 +9,8 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 2. set terminal default settings to DejaVu Sans Mono for Powerline.ttf under Right Click on Terminal > Default values > Font
 ## installing powerlevel10k
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+## installing external language beautifiers (for vim) [apt-get package manager can be replaced with yours]
+    sudo apt-get install clang-format
 ## copy setup from this repo
     git clone https://github.com/larsaars/linux-setup.git
     cp -r linux-setup/* ./
