@@ -24,7 +24,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 
 ## features
 ### zsh
-* more beautiful look
+* more beautiful look of shell
 * more possibilites
 ### vim
 * press f6 to beautify code
