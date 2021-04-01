@@ -28,7 +28,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 * more possibilites
 ### vim
 * press f6 to beautify code
-* press f7 to compile and execute automatically (currently supported: c and c++)
+* press f7 to compile and execute automatically (currently supported: c and c++) --> params can be entered!
 * press f8 and s-f8 to switch style
 * press f9 to toggle tree (open multiple tabs with `t` and switch between them with `gt` and `gT`)
 * press f10 to `:q!`
