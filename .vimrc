@@ -111,3 +111,8 @@ map <F7> :w <CR> :!g++ % -o %< && ./%< <CR>
 
 " autoformat code on pressing f5 for any language
 map <F5> gg=G <CR> 
+
+" git commands
+map <F2> :w <CR> :!git pull <CR> :e <CR>
+map <F3> :w <CR> :!git add --all && !./gitcommit <CR>
+map <F5> :!git push <CR>
