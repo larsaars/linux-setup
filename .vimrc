@@ -91,9 +91,9 @@ Plug 'preservim/nerdtree' |
 Plug 'ap/vim-css-color'
 call plug#end()
 
-" every c and cpp file will be formatted by the program clang-format
+" every c and cpp (and other languages) file will be formatted by the program clang-format
 " (installed)
-autocmd FileType c,cpp setlocal equalprg=clang-format
+autocmd FileType c,cpp,java,js,cs setlocal equalprg=clang-format
 
 " toggle nerd tree on fß click 
 map <F9> :NERDTreeToggle<CR>
@@ -105,14 +105,10 @@ map <F10> :q!<CR>
 " Find string in files:
 "[:vim foo **/*.js | copen]
 
-" compile g++ and gcc on f7 and f6
-map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
-map <F7> :w <CR> :!g++ % -o %< && ./%< <CR>
+" compile with compile program
+map <F7> :w <CR> :!~/executevim %:p <CR>
 
 " autoformat code on pressing f5 for any language
-map <F5> gg=G <CR> 
+map <F6> gg=G <CR> 
 
-" git commands
-map <F2> :w <CR> :!git pull <CR> :e <CR>
-map <F3> :w <CR> :!git add --all && !./gitcommit <CR>
-map <F5> :!git push <CR>
+

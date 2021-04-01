@@ -1,0 +1,4 @@
+AlignTrailingComments: true
+AllowShortLoopsOnASingleLine: true
+BreakBeforeBinaryOperators: false
+IndentWidth: 4
