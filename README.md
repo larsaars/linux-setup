@@ -17,6 +17,8 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 ### copy setup from this repo
     git clone https://github.com/larsaars/linux-setup.git
     cp -r linux-setup/* ./
+#### compile executevim.cpp for being able to compile and execute programs with f7
+    g++ executevim.cpp -o executevim
 ### installing plugins (in vim)
     :PlugInstall
 
@@ -25,9 +27,8 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 * more beautiful look
 * more possibilites
 ### vim
-* press f5 to beautify code
-* press f6 to compile and execute with gcc
-* press f7 to compile and execute with g++
+* press f6 to beautify code
+* press f7 to compile and execute automatically (currently supported: c and c++)
 * press f8 and s-f8 to switch style
 * press f9 to toggle tree (open multiple tabs with `t` and switch between them with `gt` and `gT`)
 * press f10 to `:q!`
