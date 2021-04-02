@@ -14,6 +14,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
     zsh restart
     cd ~
+Configure powerlevel10k as you want it.
 ### installing external language beautifiers (for vim)
 > Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
 #### for c and c++
