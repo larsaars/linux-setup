@@ -1,5 +1,5 @@
 # linux-setup
-My linux setup including vim config (based on [this](https://github.com/ny64/vim-setup)) etc. Be sure to be in home dir (~) when installing!
+My linux setup including vim config (based on [this](https://github.com/ny64/vim-setup)) etc. Be sure to always be in home dir (`cd ~`) when installing!
 > Note: I'm using the WSL with Kali-Linux for this setup.
 
 ## installation
@@ -10,7 +10,10 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 1. download and install the ttf fonts from [powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) manually on your Windows PC
 2. set terminal default settings to DejaVu Sans Mono for Powerline.ttf under Right Click on Terminal > Default values > Font
 ### installing powerlevel10k
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    zsh restart
+    cd ~
 ### installing external language beautifiers (for vim)
 > Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
 #### for c and c++
