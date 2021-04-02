@@ -4,7 +4,7 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 
 ## installation
 ### zsh
-    sudo apt-get install zsh git
+    sudo apt-get install zsh git vim
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #### fixing the WSL font / icon bug with zsh (on Windows):
 1. download and install the ttf fonts from [powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) manually on your Windows PC
