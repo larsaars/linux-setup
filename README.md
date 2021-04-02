@@ -19,7 +19,7 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 > Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
 #### for c and c++
     sudo apt-get install clang-format
-### copy setup from this repo
+### copy setup from this repository
     git clone https://github.com/larsaars/linux-setup.git
     cd linux-setup
     cp -R * ..
@@ -30,7 +30,7 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 ### installing plugins (in vim)
     :PlugInstall
 ### clean up
-    rm -rf 
+    rm -rf LICENSE README.md executevim.cpp
 
 ## features
 ### zsh
