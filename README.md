@@ -21,7 +21,10 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
     sudo apt-get install clang-format
 ### copy setup from this repo
     git clone https://github.com/larsaars/linux-setup.git
-    cp -r linux-setup ./
+    cd linux-setup
+    cp -R * ..
+    cp -R .[a-zA-Z0-9]* ..
+    cd ..
 #### compile executevim.cpp for being able to compile and execute programs with f7
     g++ executevim.cpp -o executevim
 ### installing plugins (in vim)
