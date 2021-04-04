@@ -46,3 +46,4 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 * press `jk` at the same time in insert mode to exit it
 * auto indent and bracket replacement
 * general styling
+* error linting
