@@ -51,7 +51,7 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
     * open multiple tabs with `t` and switch between them with `gt` and `gT` or with `alt-j` and `alt-k`
     * with `v` to open file in split window to left
     * switch between windows by pressing `ctrl+w` and then use the standard movement keys to switch between windows (`h`, `j`, `k` and `l`)
-* press f10 to `:q!`
+* press `F10` to `:q!`
 * press `jk` at the same time in insert mode to exit it
 * auto indent and bracket replacement
 * general styling
