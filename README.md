@@ -37,10 +37,11 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 * more beautiful look of shell
 * more possibilites
 ### vim
+* press f2 to paste code
 * press f6 to beautify code
 * press f7 to compile and execute automatically (currently supported: c and c++) --> params can be entered!
-* press f8 and s-f8 to switch style
-* press f9 to toggle tree (open multiple tabs with `t` and switch between them with `gt` and `gT`)
+* press f8 to toggle style
+* press f9 to toggle tree (open multiple tabs with `t` and switch between them with `gt` and `gT` or with `alt-j` and `alt-k`)
 * press f10 to `:q!`
 * press `jk` at the same time in insert mode to exit it
 * auto indent and bracket replacement
