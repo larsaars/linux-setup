@@ -37,7 +37,7 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 * more beautiful look of shell
 * more possibilites
 ### vim
-* press f2 to paste code
+* press f2 to toggle paste mode
 * press f6 to beautify code
 * press f7 to compile and execute automatically (currently supported: c and c++) --> params can be entered!
 * press f8 to toggle style
