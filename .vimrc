@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 " plugins
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 
@@ -143,6 +144,6 @@ map <F7> :w <CR> :!~/executevim %:p <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
 " toggle tree on f9 click 
-" map <F9> :call ToggleNetrw()<CR>
+map <F9> :call ToggleNetrw()<CR>
 " quit with override on pressing f10
 map <F10> :q!<CR>
