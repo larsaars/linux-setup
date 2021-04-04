@@ -37,11 +37,11 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 * more beautiful look of shell
 * more possibilites
 ### vim
-* press f2 to toggle paste mode
-* press f6 to beautify code
-* press f7 to compile and execute automatically (currently supported: c and c++) --> params can be entered!
-* press f8 to toggle style
-* press f9 to toggle tree
+* press `F2` to toggle paste mode
+* press `F6` to beautify code
+* press `F7` to compile and execute automatically (currently supported: c and c++) --> params can be entered!
+* press `F8` to toggle style
+* press `F9` or `"` to toggle tree
     * open folders with `enter`
     * replace file in current window by clicking `enter` on file
     * open multiple tabs with `t` and switch between them with `gt` and `gT` or with `alt-j` and `alt-k`
