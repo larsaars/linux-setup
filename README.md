@@ -38,6 +38,10 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
 * more possibilites
 ### vim
 * press `F2` to toggle paste mode
+* git implementation
+    * use `F3` for `git pull`
+    * use `F4` for `git add -A && git commit -m "...`
+    * use `F5` for `git push`
 * press `F6` to beautify code
 * press `F7` to compile and execute automatically (currently supported: c and c++) --> params can be entered!
 * press `F8` to toggle style
