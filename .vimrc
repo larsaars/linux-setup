@@ -147,7 +147,7 @@ set pastetoggle=<F2>
 " git commands (pull, add | commit, push)
 map <F3> :!git pull <CR>
 map <F4> :!git add --all && git commit -m "auto committed"
-map <F5> :!git push <CR>
+nmap <F5> :!git push <CR>
 " autoformat code on pressing f6 for any language
 map <F6> gg=G <CR> 
 " compile with compile program
