@@ -105,8 +105,12 @@ let g:ale_fix_on_save=1
 " appearance
 let g:netrw_liststyle = 3 
 let g:netrw_banner = 0
-let g:netrw_browse_split = 3
+let g:netrw_browse_split = 0
 let g:netrw_winsize = 25
+" start netrw silent
+let g:netrw_silent = 1
+" when pressing v open in window on right of tree
+let g:netrw_altv=2
 " Netrw toggle function
 let g:NetrwIsOpen = 0
 function! ToggleNetrw()
@@ -140,13 +144,19 @@ inoremap kj <esc>
 
 " fix pasting from other application with f2
 set pastetoggle=<F2>
-" autoformat code on pressing f5 for any language
+" git commands (pull, add | commit, push)
+map <F3> :!git pull <CR>
+map <F4> :!git add --all && git commit -m "auto committed"
+map <F6> :!git push
+" autoformat code on pressing f6 for any language
 map <F6> gg=G <CR> 
 " compile with compile program
 map <F7> :w <CR> :!~/executevim %:p <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
-" toggle tree on f9 
-map <F9> :call ToggleNetrw()<CR>
+" toggle tree on f9 or on shift+2 (which is basically ")
+map <F9> :call ToggleNetrw() <CR>
+map " :call ToggleNetrw() <CR>
 " quit with override on pressing f10
 map <F10> :q!<CR>
+
