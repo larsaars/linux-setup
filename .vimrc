@@ -97,6 +97,9 @@ set noerrorbells
 " (installed)
 autocmd FileType c,cpp,java,js,cs setlocal equalprg=clang-format
 
+" ale linter options
+let g:ale_fix_on_save=1
+
 
 "+++++++++++++++++++++++++++++++++ Netrw (file menu) +++++++++++++++++++++++++++++++++"
 " appearance
@@ -143,7 +146,7 @@ map <F6> gg=G <CR>
 map <F7> :w <CR> :!~/executevim %:p <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
-" toggle tree on f9 click 
+" toggle tree on f9 
 map <F9> :call ToggleNetrw()<CR>
 " quit with override on pressing f10
 map <F10> :q!<CR>
