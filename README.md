@@ -43,7 +43,9 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
     * use `F4` for `git add -A && git commit -m "...`
     * use `F5` for `git push`
 * press `F6` to beautify code
-* press `F7` to compile and execute automatically (currently supported: c, c++, java, python) --> params can be entered
+* press `F7` to compile and execute automatically (single files only)
+    * currently supported: c, c++, java, python
+    * params can be entered
 * press `F8` to toggle style
 * press `F9` or `"` to toggle tree
     * open folders with `enter`
