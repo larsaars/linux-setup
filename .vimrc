@@ -102,7 +102,17 @@ function FormatBuffer()
     endif
 endfunction
 
-autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag, *.java :call FormatBuffer()
+autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag,*.java :call FormatBuffer() 
+
+" format on f6 click by keeping pointer and just calling gg=G
+function FormatButton()
+    if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+        let cursor_pos = getpos('.')
+        gg=G
+        call setpos('.', cursor_pos)
+    endif
+endfunction
+
 
 
 " every c and cpp (and other languages) file will be formatted by the program clang-format
@@ -122,7 +132,9 @@ let g:netrw_winsize = 25
 " start netrw silent
 let g:netrw_silent = 1
 " when pressing v open in window on right of tree
-let g:netrw_altv=2
+let g:netrw_altv=1
+" close window after opening file
+let g:netrw_fastbrowse=0
 " Netrw toggle function
 let g:NetrwIsOpen = 0
 function! ToggleNetrw()
@@ -161,7 +173,7 @@ map <F3> :!git pull <CR>
 map <F4> :!git add -A && git commit -m "
 map <F5> :!git push <CR>
 " autoformat code on pressing f6 for any language
-map <F6> gg=G <CR> 
+map <F6> :w <CR> :call FormatButton() <CR> 
 " compile with compile program
 map <F7> :w <CR> :!~/executevim %:p <CR>
 " press f8 to switch theme (with previously defined function)
