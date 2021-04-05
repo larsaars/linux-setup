@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
     int extIdx = path.find_last_of(".");
     string ext = path.substr(extIdx + 1);
     string exe = path.substr(0, extIdx);
-    string prefix = "", suffix = "";
+    string prefix = "";
 
     // compile files to executable in path
     if (ext == "c")
@@ -53,14 +53,16 @@ int main(int argc, char **argv) {
         exec("javac " + path);
         prefix = "java ";
         exe += ".class";
-    } else if (ext == "py")
+    } else if (ext == "py") {
         prefix = "python ";
-
+        exe = path;
+    }
+        
     // now execute and ask if any parameters shall be entered
     cout << exe << endl;
     string params = "";
     getline(cin, params);
-    string exeCmd = prefix + exe + " " + params + suffix;
+    string exeCmd = prefix + exe + " " + params;
     system(exeCmd.c_str());
 
     return 0;
