@@ -93,9 +93,21 @@ set noswapfile
 set smartindent
 set noerrorbells
 
+" function to beautify file automatically on write
+function FormatBuffer()
+    if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+        let cursor_pos = getpos('.')
+        :%!clang-format
+        call setpos('.', cursor_pos)
+    endif
+endfunction
+
+autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag, *.java :call FormatBuffer()
+
+
 " every c and cpp (and other languages) file will be formatted by the program clang-format
 " (installed)
-autocmd FileType c,cpp,java,js,cs setlocal equalprg=clang-format
+autocmd FileType c,cpp,java,cs setlocal equalprg=clang-format
 
 " ale linter options
 let g:ale_fix_on_save=1
