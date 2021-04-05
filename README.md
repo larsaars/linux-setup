@@ -3,8 +3,8 @@ My linux setup including vim config (based on [this](https://github.com/ny64/vim
 > Note: I'm using the WSL with Kali-Linux for this setup.
 
 ## installation
-### zsh
-    sudo apt-get install zsh git vim g++ gcc gdb cgdb
+### zsh and other necessary packages
+    sudo apt-get install zsh git vim g++ gcc gdb cgdb default-jdk
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #### fixing the WSL font / icon bug with zsh (on Windows):
 1. download and install the ttf fonts from [powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) manually on your Windows PC
