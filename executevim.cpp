@@ -34,8 +34,10 @@ string exec(string cmd0) {
 
 int main(int argc, char **argv) {
     // check if all arguments exist
-    if (argc != 2)
+    if (argc != 2) {
+        cout << "arguments missing (full path) or too many args!";
         return -1;
+    }
 
     // get file type and path
     string path = argv[1];
@@ -46,23 +48,23 @@ int main(int argc, char **argv) {
 
     // compile files to executable in path
     if (ext == "c")
-        exec("gcc " + path + " -o " + exe);
+        exec("gcc \"" + path + "\" -o " + exe);
     else if (ext == "cpp")
-        exec("g++ " + path + " -o " + exe);
+        exec("g++ \"" + path + "\" -o " + exe);
     else if (ext == "java") {
-        exec("javac " + path);
+        exec("javac \"" + path + "\"");
         prefix = "java ";
         exe += ".class";
     } else if (ext == "py") {
         prefix = "python ";
         exe = path;
     }
-        
+
     // now execute and ask if any parameters shall be entered
     cout << exe << endl;
     string params = "";
     getline(cin, params);
-    string exeCmd = prefix + exe + " " + params;
+    string exeCmd = prefix + "\"" + exe + "\" " + params;
     system(exeCmd.c_str());
 
     return 0;

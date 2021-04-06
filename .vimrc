@@ -173,9 +173,9 @@ map <F3> :!git pull <CR>
 map <F4> :!git add -A && git commit -m "
 map <F5> :!git push <CR>
 " autoformat code on pressing f6 for any language
-map <F6> :w <CR> :call FormatButton() <CR> 
+map <F6> :!cp ~/.clang-format . <CR> :w <CR> :call FormatButton() <CR> 
 " compile with compile program
-map <F7> :w <CR> :!~/executevim %:p <CR>
+map <F7> :w <CR> :!~/executevim "%:p" <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
 " toggle tree on f9 or on shift+2 (which is basically ")
