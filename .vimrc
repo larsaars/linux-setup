@@ -82,6 +82,12 @@ inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}
 inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
 
+" when brace + enter is pressed automatically add indent correctly and add
+" missing brace
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap [<CR> [<CR>]<Esc>ko
+inoremap (<CR> (<CR>)<Esc>ko
+
 " Other
 set nowb
 set showcmd
@@ -185,7 +191,8 @@ map " :call ToggleNetrw() <CR>
 map <F10> :q!<CR>
 
 " easier parenthesis opening
-map ä A<space>{<CR><CR><esc><<<<<<ki<tab>
+map ä A<space>{<CR>
 
 " add semicolon at end of line
-map ö A;<esc>
+map ö A;<esc> 
+
