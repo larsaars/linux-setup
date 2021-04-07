@@ -184,3 +184,6 @@ map " :call ToggleNetrw() <CR>
 " quit with override on pressing f10
 map <F10> :q!<CR>
 
+" easier parenthesis opening
+map ö A<space>{<CR><CR><esc><<<<<<ki<tab>
+
