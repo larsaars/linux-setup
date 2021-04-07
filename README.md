@@ -65,6 +65,7 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
             // you are here
         }
         ```
+* press `ä` to jump to end of line and insert a semicolon
 * auto format on save
 * auto indent and bracket replacement
 * general styling
