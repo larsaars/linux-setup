@@ -185,7 +185,7 @@ map " :call ToggleNetrw() <CR>
 map <F10> :q!<CR>
 
 " easier parenthesis opening
-map ö A<space>{<CR><CR><esc><<<<<<ki<tab>
+map ä A<space>{<CR><CR><esc><<<<<<ki<tab>
 
 " add semicolon at end of line
-map ä A;<esc>
+map ö A;<esc>
