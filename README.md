@@ -57,6 +57,12 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
     * switch between windows by pressing `ctrl+w` and then use the standard movement keys to switch between windows (`h`, `j`, `k` and `l`)
 * press `F10` to `:q!`
 * press `jk` at the same time in insert mode to exit it
+* press `ö` to jump to end of line, insert parenthesis and be in insert mode in the line
+    * example: `int main(int argc)`, your cursor is at `argc`
+    * exit insert mode and press `ö`, you will get:
+        int main(int argc) {
+            // you are here
+        }
 * auto format on save
 * auto indent and bracket replacement
 * general styling
