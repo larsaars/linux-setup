@@ -48,9 +48,9 @@ int main(int argc, char **argv) {
 
     // compile files to executable in path
     if (ext == "c")
-        exec("gcc \"" + path + "\" -o " + exe);
+        exec("gcc \"" + path + "\" -o \"" + exe + "\"");
     else if (ext == "cpp")
-        exec("g++ \"" + path + "\" -o " + exe);
+        exec("g++ \"" + path + "\" -o \"" + exe + "\"");
     else if (ext == "java") {
         exec("javac \"" + path + "\"");
         prefix = "java ";
