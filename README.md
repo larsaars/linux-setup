@@ -61,9 +61,10 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
     * example: `int main(int argc)`, your cursor is at `argc`
     * exit insert mode and press `ö`, you will get:
 
-    int main(int argc) {
+    ```int main(int argc) {
         // you are here
     }
+    ```
 
 * auto format on save
 * auto indent and bracket replacement
