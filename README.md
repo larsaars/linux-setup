@@ -2,6 +2,8 @@
 My linux setup including vim config (based on [this](https://github.com/ny64/vim-setup)) etc. Be sure to always be in home dir (`cd ~`) when installing!
 > Note: I'm using the WSL with Kali-Linux for this setup.
 
+Find detailed vim shortcut list [here](https://gist.github.com/larsaars/b3ec6df54fbb0ce31b740c8afbe949e9).
+
 ## installation
 ### zsh and other necessary packages
     sudo apt-get install zsh git vim g++ gcc gdb cgdb default-jdk
