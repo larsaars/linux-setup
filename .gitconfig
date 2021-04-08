@@ -2,8 +2,12 @@
 	name = larsaars
 	email = lurzapps@gmail.com
 [credential]
-	helper = cache --timeout=300
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
-	program = gpg2
+	program = gpg
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
