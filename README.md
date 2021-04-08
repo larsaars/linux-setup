@@ -73,15 +73,15 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 * general styling
 * error linting
 
-## standard debugging of easy program
-### cgdb, gdb
+# standard debugging of easy program
+## cgdb, gdb
 * compile c++ code with `g++ -o0 -ggdb3 filename.cpp -o execname`
 * start debugger with `cgdb filename` or `gdb -tui filename`
     * set a breakpoint at main: `break main`
     * run with: `run param1 param2 ... paramN`
     * `n` or `s` for line to line stepping, then only press enter
 
-### valgrind ([source](https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks) of explanation)
+## valgrind ([source](https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks) of explanation)
 To run Valgrind, pass the executable as an argument (along with any parameters to the program).
 ```
 valgrind --leak-check=full \
