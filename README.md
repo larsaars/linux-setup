@@ -66,6 +66,9 @@ Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10
         }
         ```
 * press `ä` to jump to end of line and insert a semicolon
+* press `ü` to delete two together belonging parenthesis, brackets or braces
+* press `+` in visual or command mode to swap inline comment of line
+* press `enter` in command mode to actually enter a newline below staying in command mode
 * auto format on save
 * auto indent and bracket replacement
 * general styling
