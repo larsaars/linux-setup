@@ -202,7 +202,7 @@ map <F10> :q!<CR>
 " easier parenthesis opening
 map ä A<space>{<CR>
 " add semicolon at end of line
-map ö A;<esc> 
+map ö A;<esc>
 " easier deletion of two belonging parenthesis
 map ü mp%x'px
 
@@ -211,6 +211,6 @@ map ü mp%x'px
 nnoremap + :AutoInlineComment <CR>
 vnoremap + :AutoInlineComment <CR>
  
-" remap enter in command mode to really insert a newline
-noremap <CR> mpo<esc>'p
+" remap minus in command mode to put a newline below
+noremap - mpo<esc>'p
 
