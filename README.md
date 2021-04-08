@@ -14,9 +14,8 @@ Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts
 ### installing powerlevel10k
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-    zsh restart
-    cd ~
-Configure powerlevel10k as you want it (you can reconfigure it anytime with `p10k configure`).
+
+Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Configure powerlevel10k as you want it (you can always reconfigure it anytime with `p10k configure`).
 ### installing external language beautifiers (for vim)
 > Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
 #### for c and c++
