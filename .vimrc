@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
+Plug 'KarimElghamry/vim-auto-comment'
 call plug#end()
 
 
@@ -99,6 +100,14 @@ set noswapfile
 set smartindent
 set noerrorbells
 
+" vim auto comment variables
+let g:default_inline_comment="#"
+let g:inline_comment_dict = {
+		\'//': ["js", "ts", "cpp", "c", "dart"],
+		\'#': ['py', 'sh'],
+		\'"': ['vim', 'vimrc'],
+		\}
+
 " function to beautify file automatically on write
 function FormatBuffer()
     if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
@@ -179,7 +188,7 @@ map <F3> :!git pull <CR>
 map <F4> :!git add -A && git commit -m "
 map <F5> :!git push <CR>
 " autoformat code on pressing f6 for any language
-map <F6> :!cp ~/.clang-format %:h <CR> :w <CR> :call FormatButton() <CR> 
+map <F6> !cp ~/.clang-format %:h <CR> :w <CR> :call FormatButton() <CR> 
 " compile with compile program
 map <F7> :w <CR> :!~/executevim "%:p" <CR>
 " press f8 to switch theme (with previously defined function)
@@ -192,7 +201,16 @@ map <F10> :q!<CR>
 
 " easier parenthesis opening
 map ä A<space>{<CR>
-
 " add semicolon at end of line
 map ö A;<esc> 
+" easier deletion of two belonging parenthesis
+map ü mp%x'px
+
+" keys for auto commenting:
+" auto inline comment in command and in visual mode
+nnoremap + :AutoInlineComment <CR>
+vnoremap + :AutoInlineComment <CR>
+ 
+" remap enter in command mode to really insert a newline
+noremap <CR> mpo<esc>'p
 
