@@ -6,7 +6,7 @@ Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts
 
 ## installation
 ### zsh and other necessary packages
-    sudo apt-get install zsh git vim g++ gcc gdb cgdb default-jdk
+    sudo apt-get install zsh git vim g++ gcc gdb cgdb valgrind default-jdk
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 #### fixing the WSL font / icon bug with zsh (on Windows):
 1. download and install the ttf fonts from [powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) manually on your Windows PC
@@ -72,3 +72,22 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 * auto indent and bracket replacement
 * general styling
 * error linting
+
+## standard debugging of easy program
+### cgdb, gdb
+* compile c++ code with `g++ -o0 -ggdb3 filename.cpp -o execname`
+* start debugger with `cgdb filename` or `gdb -tui filename`
+    * set a breakpoint at main: `break main`
+    * run with: `run param1 param2 ... paramN`
+    * `n` or `s` for line to line stepping, then only press enter
+
+### valgrind ([source](https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks) of explanation)
+To run Valgrind, pass the executable as an argument (along with any parameters to the program).
+```
+valgrind --leak-check=full \
+         --show-leak-kinds=all \
+         --track-origins=yes \
+         --verbose \
+         --log-file=valgrind-out.txt \
+         ./executable exampleParam1
+```
