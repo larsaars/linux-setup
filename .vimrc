@@ -204,7 +204,7 @@ map ä A<space>{<CR>
 " add semicolon at end of line
 map ö A;<esc>
 " easier deletion of two belonging parenthesis
-map ü mp%x'px
+map ü mp%x`px
 
 " keys for auto commenting:
 " auto inline comment in command and in visual mode
@@ -212,5 +212,5 @@ nnoremap + :AutoInlineComment <CR>
 vnoremap + :AutoInlineComment <CR>
  
 " remap minus in command mode to put a newline below
-noremap - mpo<esc>'p
+noremap - mpo<esc>`p
 
