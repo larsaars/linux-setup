@@ -43,7 +43,7 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
     * use `F3` for `git pull`
     * use `F4` for `git add -A && git commit -m "...`
     * use `F5` for `git push`
-* press `F6` to beautify code
+* press `F6` to copy .clang-format to current directory, whenever saving the file it will be beautified
 * press `F7` to compile and execute automatically (single files only)
     * currently supported: c, c++, java, python
     * params can be entered
