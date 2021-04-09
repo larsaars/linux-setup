@@ -102,6 +102,7 @@ set smartcase
 set noswapfile
 set smartindent
 set noerrorbells
+set formatoptions-=cro
 
 " vim auto comment variables
 let g:default_inline_comment="#"
@@ -190,8 +191,8 @@ set pastetoggle=<F2>
 map <F3> :!git pull <CR>
 map <F4> :!git add -A && git commit -m "
 map <F5> :!git push <CR>
-" autoformat code on pressing f6 for any language
-map <F6> !cp ~/.clang-format %:h <CR> :w <CR> :call FormatButton() <CR> 
+" copy with .clang-format to current dir of file on pressing f6
+map <F6> !cp ~/.clang-format "%:h" <CR>
 " compile with compile program
 map <F7> :w <CR> :!~/executevim "%:p" <CR>
 " press f8 to switch theme (with previously defined function)
