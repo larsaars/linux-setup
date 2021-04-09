@@ -29,6 +29,7 @@ string exec(string cmd0) {
     while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
         result += buffer.data();
     }
+
     return result;
 }
 
@@ -39,19 +40,41 @@ int main(int argc, char **argv) {
         return -1;
     }
 
+    // variables
+    string mode = "";
+    bool release = true;
     // get file type and path
     string path = argv[1];
     int extIdx = path.find_last_of(".");
     string ext = path.substr(extIdx + 1);
     string exe = path.substr(0, extIdx);
+    // prefix to command
     string prefix = "";
 
+    // get mode (debug or release)
+    if (ext == "c" || ext == "cpp") {
+        cout << "mode? ([d]ebug | [c]ompile only for debuggin | [v]algrind | "
+                "[R]elease)"
+             << endl;
+        getline(cin, mode);
+        release = (mode == "r" || mode == "" || mode == "R");
+    }
+
+    // inform that is compiling
+    cout << "compiling..." << endl;
+
     // compile files to executable in path
-    if (ext == "c")
-        exec("gcc \"" + path + "\" -o \"" + exe + "\"");
-    else if (ext == "cpp")
-        exec("g++ \"" + path + "\" -o \"" + exe + "\"");
-    else if (ext == "java") {
+    if (ext == "c") {
+        if (release)
+            exec("gcc \"" + path + "\" -o \"" + exe + "\"");
+        else
+            exec("gcc -g -O0 \"" + path + "\" -o \"" + exe + "\"");
+    } else if (ext == "cpp") {
+        if (release)
+            exec("g++ \"" + path + "\" -o \"" + exe + "\"");
+        else
+            exec("g++ -o0 -ggdb3 \"" + path + "\" -o \"" + exe + "\"");
+    } else if (ext == "java") {
         exec("javac \"" + path + "\"");
         prefix = "java ";
         exe += ".class";
@@ -61,11 +84,38 @@ int main(int argc, char **argv) {
     }
 
     // now execute and ask if any parameters shall be entered
+    // print name of executable
     cout << exe << endl;
+    // read out params
     string params = "";
-    getline(cin, params);
-    string exeCmd = prefix + "\"" + exe + "\" " + params;
+    if (mode != "d") {
+        getline(cin, params);
+    }
+    // get exe command
+    string exeCmd = "echo \"not executing\"";
+    if (release)
+        exeCmd = prefix + "\"" + exe + "\" " + params;
+    else if (mode == "d") {
+        cout << "tips:\n- set breakpoint at main with 'break main'\n-then run "
+                "program with 'run param1 param2 ... paramN'\n- step forward "
+                "with 'n' or 's' and then 'enter'"
+             << endl;
+        exeCmd = "cgdb \"" + exe + "\"";
+    } else if (mode == "v") {
+        exeCmd =
+            "valgrind --leak-check=full --show-leak-kinds=all "
+            "--track-origins=yes --verbose --log-file=valgrind-out.txt \"" +
+            exe + "\" " + params;
+        cout << endl << exec("cat valgrind-out.txt") << endl;
+    }
+
+    // execute
     system(exeCmd.c_str());
+
+    // if valgrind ran
+    if (mode == "v")
+        cout << endl
+             << "valgrind log can be found in ./valgrind-out.txt" << endl;
 
     return 0;
 }
