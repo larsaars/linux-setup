@@ -53,14 +53,11 @@ function! ChangeTheme()
     elseif g:ThemeN == 2
         let g:ThemeN = 3
         colorscheme jummidark
-    elseif g:ThemeN == 3
-        let g:ThemeN = 4
+    else
+        let g:ThemeN = 1
         colorscheme PaperColor 
         set background=light
         highlight colorcolumn ctermbg=lightgray
-    else 
-        let g:ThemeN = 1
-        colorscheme jummilight 
     endif
 endfunction
 
