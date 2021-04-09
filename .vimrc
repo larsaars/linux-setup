@@ -31,30 +31,36 @@ let g:lightline = {
             \ }
 
 " colorscheme and styling options
-colorscheme codedark
+colorscheme codedark 
 set background=dark
 highlight Normal ctermbg=black
 highlight EndOfBuffer ctermbg=black
 highlight LineNr ctermbg=black
-set colorcolumn=80
+" set colorcolumn=80
 highlight ColorColumn ctermbg=234
 
 " function to switch theme between light and dark
-let g:LightTheme = 0
+let g:ThemeN = 2
 function! ChangeTheme()
-    if g:LightTheme
-        let g:LightTheme = 0
-        colorscheme codedark
+    if g:ThemeN == 1
+        let g:ThemeN = 2
+        colorscheme codedark 
         set background=dark
         highlight Normal ctermbg=black
         highlight EndOfBuffer ctermbg=black
         highlight colorcolumn ctermbg=234
         highlight LineNr ctermbg=black
-    else 
-        let g:LightTheme = 1
-        colorscheme PaperColor
+    elseif g:ThemeN == 2
+        let g:ThemeN = 3
+        colorscheme jummidark
+    elseif g:ThemeN == 3
+        let g:ThemeN = 4
+        colorscheme PaperColor 
         set background=light
         highlight colorcolumn ctermbg=lightgray
+    else 
+        let g:ThemeN = 1
+        colorscheme jummilight 
     endif
 endfunction
 
