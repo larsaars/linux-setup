@@ -47,6 +47,7 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 * press `F7` to compile and execute automatically (single files only)
     * currently supported: c, c++, java, python
     * params can be entered
+    * choose between debugging with cgdb and valgrind or release mode
 * press `F8` to toggle style
 * press `F9` or `"` to toggle tree
     * open folders with `enter`
