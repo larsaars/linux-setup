@@ -102,7 +102,7 @@ set smartcase
 set noswapfile
 set smartindent
 set noerrorbells
-set formatoptions-=cro
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " vim auto comment variables
 let g:default_inline_comment="#"
