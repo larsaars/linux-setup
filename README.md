@@ -92,3 +92,8 @@ valgrind --leak-check=full \
          --log-file=valgrind-out.txt \
          ./executable exampleParam1
 ```
+
+# resources
+* [basic linux commands](https://www.hostinger.com/tutorials/linux-commands)
+* [how to navigate through linux terminal](https://help.ubuntu.com/community/UsingTheTerminal) (and basic commands)
+* [vim shortcuts](https://github.com/larsaars/vim-shortcuts)
