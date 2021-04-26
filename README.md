@@ -82,7 +82,7 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
     * run with: `run param1 param2 ... paramN`
     * `n` or `s` for line to line stepping, then only press enter
 
-## valgrind ([source](https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks) of explanation)
+## valgrind ([source](https://stackoverflow.com/a/44989219/5899585) of explanation)
 To run Valgrind, pass the executable as an argument (along with any parameters to the program).
 ```
 valgrind --leak-check=full \
@@ -92,3 +92,8 @@ valgrind --leak-check=full \
          --log-file=valgrind-out.txt \
          ./executable exampleParam1
 ```
+
+# resources
+* [basic linux commands](https://www.hostinger.com/tutorials/linux-commands)
+* [how to navigate through linux terminal](https://help.ubuntu.com/community/UsingTheTerminal) (and basic commands)
+* [vim shortcuts](https://github.com/larsaars/vim-shortcuts)
