@@ -1,0 +1,4 @@
+#! /bin/bash
+touch "$1.cpp"
+echo "#include \"$1.h\"" >> "$1.cpp"
+touch "$1.h"
