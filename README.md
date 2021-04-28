@@ -28,6 +28,9 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
     cd ..
 #### compile executevim.cpp for being able to compile and execute programs with f7
     g++ executevim.cpp -o executevim
+#### copy mkcpp into `/usr/bin`
+    sudo cp mkcpp /usr/bin
+    sudo chmod +x /usr/bin/mkcpp
 ### installing plugins (in vim)
     :PlugInstall
 ### clean up
@@ -73,6 +76,9 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 * auto indent and bracket replacement
 * general styling
 * error linting
+
+### other
+* enter `mkcpp name` to create in current directory a cpp file with belonging header and include this header in cpp file
 
 # standard debugging of easy program
 ## cgdb, gdb
