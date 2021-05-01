@@ -1,0 +1,125 @@
+" AUTHOR: larsaars
+" REPOSITORY: https://github.com/larsaars/linux-setup
+
+
+"++++++++++++++++++++++++++++++++ Appearance +++++++++++++++++++++++++++++++++"
+
+" enable autoindent
+filetype indent plugin on
+" set default indentation
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+
+" Other
+set nowb
+set showcmd
+set hlsearch
+set nobackup
+set incsearch
+set smartcase
+set smartindent
+
+" some fixes
+set relativenumber
+set number
+set highlightedyank
+set ideamarks
+set ideajoin
+set commentary
+set argtextobj
+set textobj-entire
+set surround
+let mapleader = ","
+
+"+++++++++++++++++++++++++++++++++ Key Bindings +++++++++++++++++++++++++++++++++"
+
+" leaving easier by pressing j and k at the same time
+inoremap jk <esc>
+inoremap kj <esc>
+
+" easier parenthesis opening
+map ä A<space>{<CR>
+" add semicolon at end of line
+map ö A;<esc>
+" easier deletion of two belonging parenthesis
+map ü mp%x`px
+
+" remap minus in command mode to put a newline below
+noremap - mpo<esc>`p
+
+
+" These are leader-based alternative shortcuts for actions whose corresponding
+" idea shortcuts require hand-stretching combinations, function keys, Home or
+" Insert.
+"
+" Shift + F6 in idea.
+" Alt + R, then R (through the menu bar) also seems to work fine.
+" map <Leader>r :action RenameElement<CR>
+" Ctrl + F12 in idea.
+map <Leader>s Action(FileStructurePopup)
+map s <Action>(FileStructurePopup)
+" Perhaps just use the Idea shortcut Ctrl-Alt-B
+" Alt + N, then m (through the menu bar) also seems to work, but it is
+" non-unique.
+map <Leader>i <Action>(GotoImplementation)
+map <Leader>m <Action>(GotoImplementation)
+map <Leader>d <Action>(GotoImplementation)
+" Jump to next/previous error, show error description
+" https://stackoverflow.com/questions/13346245/keyboard-shortcut-to-display-error-in-intellij
+map <Leader>e <Action>(ShowErrorDescription)
+" Alt + F7 in idea.
+" Find usages in file is Ctrl + F7.
+" Alt + E, then F, then U (through the menu bar) also seems to work fine.
+map <Leader>f <Action>(FindUsages)
+" Alt + Insert in idea.
+map <Leader>g <Action>(Generate)
+" F12
+map <Leader>w <Action>(JumpToLastWindow)
+" Possibly redundant given "Run Anything" DoubleCtrl
+map <Leader>r <Action>(ChooseRunConfiguration)
+
+" These shortcuts mimic the default Idea action for one edition mode, using the
+" Vim action for the other.
+"
+" Same as default IDEA action, but only in normal mode. Delete previous char
+" in insert mode.
+" See also Ctrl + Shift + H for method hierarchy, Ctrl + Alt + H for call
+" hierarchy.
+map <C-h> <Action>(TypeHierarchy)
+" Same as default IDEA action, but only in insert mode. Enter block-visual
+" mode in normal mode.
+imap <C-v> <Esc><Action>($Paste)
+
+" I like using space for jumping to the next error or issue
+map <Space> <Action>(GotoNextError)
+
+" The default C-o and C-i behaviours have certain inconsistencies with
+" Vim which I can't quite pinpoint.
+" I'm using the default IntelliJ behaviours instead.
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+map g; <Action>(JumpToLastChange)
+map g, <Action>(JumpToNextChange)
+
+"
+" Here are mappings about which I'm less sure.
+
+" This is for going to related symbols. I can't find any effect in the community edition.
+" map <Leader>g :action GotoRelated<CR>
+
+" uppercase last inserted text. Perhpas just use gU`[ instead.
+" map <Leader>u `[v`]~`]
+
+" Can also use Ctrl-Shift-[
+map <Leader>[ <Action>(EditorCodeBlockStart)
+" Can also use Ctrl-Shift-]
+map <Leader>] <Action>(EditorCodeBlockEnd)
+
+" This is Ctrl-W in the default keymap, but we are using it for Vim.
+" map <C-s> :action EditorSelectWord<CR> " somewhat unconfrotable to type
+" map <C-d> :action EditorSelectWord<CR> " ditto
+" better to use your two hands!
+map <C-k> <Action>(EditorSelectWord)
+
+" uppercase last inserted word
+imap <C-l> <Esc>bgUawea
