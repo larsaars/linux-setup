@@ -78,6 +78,7 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 * auto indent and bracket replacement
 * general styling
 * error linting
+* use `vip *.c` for example to open all files ending with '.c' in pwd
 
 ### other
 * enter `mkcpp name` to create in current directory a cpp file with belonging header and include this header in cpp file
