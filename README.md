@@ -35,6 +35,8 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
     :PlugInstall
 ### clean up
     rm -rf LICENSE README.md executevim.cpp
+### create alias vip (open multiple files in tabs)
+    alias vip="vim -p"
 
 ## features
 ### zsh
