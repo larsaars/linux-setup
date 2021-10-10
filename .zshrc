@@ -8,16 +8,14 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# repo with styles
-eval `dircolors ~/.dircolors`
 # Path to your oh-my-zsh installation.
-export ZSH="/home/lars/.oh-my-zsh"
+export ZSH="/home/me/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,7 +106,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# aliases i use
+alias os="onedrive --synchronize"
+alias vip="vim -p"
+alias wsc="windscribe connect"
+alias wsd="windscribe disconnect"
+alias py="python"
+# use tg -s to start -x to exit -r for new route
+alias tg="sudo torghost"
+
+# add to path
+export PATH="/home/me/.local/bin:$PATH"
+
