@@ -35,9 +35,8 @@ colorscheme codedark
 set background=dark
 highlight Normal ctermbg=black
 highlight EndOfBuffer ctermbg=black
+highlight colorcolumn ctermbg=234
 highlight LineNr ctermbg=black
-" set colorcolumn=80
-highlight ColorColumn ctermbg=234
 
 " function to switch theme between light and dark
 let g:ThemeN = 2
