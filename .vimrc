@@ -12,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'KarimElghamry/vim-auto-comment'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 
@@ -175,10 +176,14 @@ endfunction
 "+++++++++++++++++++++++++++++++++ Key Bindings +++++++++++++++++++++++++++++++++"
 
 " Change tab bindings (alt+j/alt+k)
+" and set M-l to save file
 execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"
+execute "set <M-l>=\el"
+
 nnoremap <M-j> :tabp<CR>
 nnoremap <M-k> :tabn<CR>
+nnoremap <M-l> :w <CR>
 
 " leaving easier by pressing j and k at the same time
 inoremap jk <esc>
@@ -201,6 +206,8 @@ map <F9> :call ToggleNetrw() <CR>
 map " :call ToggleNetrw() <CR>
 " quit with override on pressing f10
 map <F10> :q!<CR>
+" start tex preview pressing f12
+map <F12> :LLPStartPreview <CR>
 
 " easier parenthesis opening
 map ä A<space>{<CR>
