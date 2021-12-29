@@ -113,14 +113,15 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # aliases i use
-alias os="onedrive --synchronize"
 alias vip="vim -p"
 alias wsc="windscribe connect"
 alias wsd="windscribe disconnect"
-alias py="python"
+alias cls="clear"
+alias pub="flutter pub"
 # use tg -s to start -x to exit -r for new route
 alias tg="sudo torghost"
 
-# add to path
+# add local binaries to path
 export PATH="/home/me/.local/bin:$PATH"
-
+# and other binaries
+export PATH="/usr/local/go/bin:$PATH"
