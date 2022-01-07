@@ -125,3 +125,7 @@ alias tg="sudo torghost"
 export PATH="/home/me/.local/bin:$PATH"
 # and other binaries
 export PATH="/usr/local/go/bin:$PATH"
+source $HOME/miniconda3/bin/activate
+
+# add snapapps to the XDG_DATA_DIRS
+export XDG_DATA_DIRS="/var/lib/snapd/desktop:$XDG_DATA_DIRS"
