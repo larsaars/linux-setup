@@ -122,10 +122,10 @@ alias pub="flutter pub"
 alias tg="sudo torghost"
 
 # add local binaries to path
-export PATH="/home/me/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 # and other binaries
 export PATH="/usr/local/go/bin:$PATH"
-source $HOME/miniconda3/bin/activate
+export PATH="$HOME/miniconda3/bin:$PATH"
 
 # add snapapps to the XDG_DATA_DIRS
 export XDG_DATA_DIRS="/var/lib/snapd/desktop:$XDG_DATA_DIRS"
