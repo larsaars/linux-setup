@@ -129,3 +129,6 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 
 # add snapapps to the XDG_DATA_DIRS
 export XDG_DATA_DIRS="/var/lib/snapd/desktop:$XDG_DATA_DIRS"
+
+# set default input mode to vim
+set -o vi
