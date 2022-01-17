@@ -122,7 +122,7 @@ alias pub="flutter pub"
 alias tg="sudo torghost"
 
 # for python shell
-alias psh='~/tools/psh'
+alias psh='~/tools/python_shell/psh'
 
 # add local binaries to path
 export PATH="$HOME/.local/bin:$PATH"
