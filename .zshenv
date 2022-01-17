@@ -121,6 +121,9 @@ alias pub="flutter pub"
 # use tg -s to start -x to exit -r for new route
 alias tg="sudo torghost"
 
+# for python shell
+alias psh='~/tools/psh'
+
 # add local binaries to path
 export PATH="$HOME/.local/bin:$PATH"
 # and other binaries
@@ -129,6 +132,9 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 
 # add snapapps to the XDG_DATA_DIRS
 export XDG_DATA_DIRS="/var/lib/snapd/desktop:$XDG_DATA_DIRS"
+
+# export python startup .pythonrc
+export PYTHONSTARTUP=~/.pythonrc
 
 # set default input mode to vim
 set -o vi
