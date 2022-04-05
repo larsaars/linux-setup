@@ -118,11 +118,16 @@ alias wsc="windscribe connect"
 alias wsd="windscribe disconnect"
 alias cls="clear"
 alias pub="flutter pub"
+
 # use tg -s to start -x to exit -r for new route
 alias tg="sudo torghost"
 
-# for python shell
-alias psh='~/tools/python_shell/psh'
+# for mkdir and cd directly
+mkc ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
 
 # add local binaries to path
 export PATH="$HOME/.local/bin:$PATH"
