@@ -1,6 +1,7 @@
 # linux-setup
 My linux setup including vim config (based on [this](https://github.com/ny64/vim-setup)) etc. Be sure to always be in home dir (`cd ~`) when installing!
 > Note: I'm using the WSL with Kali-Linux for this setup.
+> Currently im using Ubuntu with Regolith-Linux and rarely KDE. And alot of vim and the command line. Absolutely worth learning!
 
 Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts).
 
