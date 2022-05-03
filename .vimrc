@@ -2,6 +2,7 @@
 " REPOSITORY: https://github.com/larsaars/linux-setup
 
 
+
 "+++++++++++++++++++++++++++++++++ Load Plugins +++++++++++++++++++++++++++++++++"
 
 " load vim-plug plugin
@@ -102,6 +103,9 @@ set noswapfile
 set smartindent
 set noerrorbells
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" vim will use system clipboard instead of its own
+set clipboard=unnamed,unnamedplus
 
 " vim auto comment variables
 let g:default_inline_comment="#"
