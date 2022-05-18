@@ -122,6 +122,9 @@ alias pub="flutter pub"
 # use tg -s to start -x to exit -r for new route
 alias tg="sudo torghost"
 
+# alias for copying to clipboard
+alias clip="xclip -sel clip"
+
 # for mkdir and cd directly
 mkc ()
 {
