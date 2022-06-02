@@ -9,6 +9,8 @@ Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts
 ### zsh and other necessary packages
     sudo apt-get install zsh git vim g++ gcc gdb cgdb valgrind default-jdk tig
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+### helpful packages
+    pip install thefuck
 #### fixing the WSL font / icon bug with zsh (on Windows):
 1. download and install the ttf fonts from [powerline](https://github.com/powerline/fonts/tree/master/DejaVuSansMono) manually on your Windows PC
 2. set terminal default settings to DejaVu Sans Mono for Powerline.ttf under Right Click on Terminal > Default values > Font
