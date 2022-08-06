@@ -21,25 +21,32 @@ Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts
 Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Configure powerlevel10k as you want it (you can always reconfigure it anytime with `p10k configure`).
 ### installing external language beautifiers (for vim)
 > Note: apt-get package manager has to be replaced with yours (on mac e.g. with `brew install`).
-#### for c and c++
-    sudo apt-get install clang-format
 ### copy setup from this repository
+
     git clone https://github.com/larsaars/linux-setup.git
     cd linux-setup
     cp -R * ..
     cp -R .[a-zA-Z0-9]* ..
     cd ..
-#### compile executevim.cpp for being able to compile and execute programs with f7
-    g++ executevim.cpp -o executevim
+
 #### copy mkcpp into `/usr/bin`
     sudo cp mkcpp /usr/bin
     sudo chmod +x /usr/bin/mkcpp
+    
 ### installing plugins (in vim)
+
     :PlugInstall
+
+### setup copilot
+
+    :Copilot setup
+    
+### github store creds
+
+     git config --global --replace-all credential.helper store
+    
 ### clean up
     rm -rf LICENSE README.md executevim.cpp
-### create alias vip (open multiple files in tabs)
-    alias vip="vim -p"
 
 ## features
 ### zsh
