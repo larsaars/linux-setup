@@ -7,7 +7,7 @@ Find detailed vim shortcut list [here](https://github.com/larsaars/vim-shortcuts
 
 ## installation
 ### zsh and other necessary packages
-    sudo apt-get install zsh git vim g++ gcc gdb cgdb valgrind default-jdk tig
+    sudo apt-get install zsh git neovim g++ gcc gdb cgdb valgrind default-jdk tig
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ### helpful packages
     pip install thefuck
