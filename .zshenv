@@ -146,3 +146,16 @@ export PYTHONSTARTUP=~/.pythonrc
 
 # set default input mode to vim
 set -o vi
+
+# start zsh in the same pwd as last used
+# save path on cd
+function cd {
+    builtin cd $@
+    pwd > ~/.last_dir
+}
+
+# restore last saved path
+if [ -f ~/.last_dir ]
+    then cd `cat ~/.last_dir`
+fi
+
