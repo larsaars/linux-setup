@@ -13,6 +13,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'KarimElghamry/vim-auto-comment'
+
+Plug 'github/copilot.vim', {'branch': 'release'}
+
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 
@@ -191,10 +198,6 @@ endfunction
 
 " Change tab bindings (alt+j/alt+k)
 " and set M-l to save file
-execute "set <M-j>=\ej"
-execute "set <M-k>=\ek"
-execute "set <M-l>=\el"
-
 nnoremap <M-j> :tabp<CR>
 nnoremap <M-k> :tabn<CR>
 nnoremap <M-l> :w <CR>
@@ -209,10 +212,6 @@ set pastetoggle=<F2>
 map <F3> :!git pull <CR>
 map <F4> :!git add -A && git commit -m "
 map <F5> :!git push <CR>
-" copy with .clang-format to current dir of file on pressing f6
-map <F6> !cp ~/.clang-format "%:h" <CR>
-" compile with compile program
-map <F7> :w <CR> :!~/executevim "%:p" <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
 " toggle tree on f9 or on shift+2 (which is basically ")
