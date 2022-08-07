@@ -33,9 +33,15 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
     sudo cp mkcpp /usr/bin
     sudo chmod +x /usr/bin/mkcpp
     
+
+### install neovim pyhton suppport
+
+    pip3 install pynvim --upgrade 
+
 ### installing plugins (in vim)
 
     :PlugInstall
+    :UpdateRemotePlugins
 
 ### setup copilot
 
