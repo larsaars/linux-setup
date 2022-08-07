@@ -198,10 +198,11 @@ endfunction
 "+++++++++++++++++++++++++++++++++ Key Bindings +++++++++++++++++++++++++++++++++"
 
 " Change tab bindings (alt+j/alt+k)
-" and set M-l to save file
+" and set M-l and M-h to move tab one left or right
 nnoremap <M-j> :tabp<CR>
 nnoremap <M-k> :tabn<CR>
-nnoremap <M-l> :w <CR>
+nnoremap <M-l> :tabm +1 <CR>
+nnoremap <M-h> :tabm -1 <CR>
 
 " leaving easier by pressing j and k at the same time
 inoremap jk <esc>
