@@ -125,14 +125,35 @@ alias tg="sudo torghost"
 # alias for copying to clipboard
 alias clip="xclip -sel clip"
 
-# alias for finding largest files
-alias ducks='du -hsx * | sort -rh | head -n 10'
+# alias for finding largest files and smallest
+function fl() {
+    local nsize="${1:-10}"
+    du -hsx * | sort -rh | head -n "$nsize"
+}
+
+function fs() {
+    local nsize="${1:-10}"
+    du -hsx * | sort -h | head -n "$nsize"
+}
 
 # for mkdir and cd directly
-mkc ()
-{
+function mkc () {
     mkdir -p -- "$1" &&
        cd -P -- "$1"
+}
+
+# git aliases
+alias gs="git status"
+alias gd="git diff"
+alias gc="git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias ga="git add -A"
+
+# start simple server
+function server() {
+    local port="${1:-8000}"
+    python -m SimpleHTTPServer "$port"
 }
 
 # add local binaries to path
