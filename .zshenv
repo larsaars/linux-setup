@@ -126,7 +126,7 @@ alias tg="sudo torghost"
 alias clip="xclip -sel clip"
 
 # alias for finding largest files
-alias ducks='du -cks * | sort -rn | head -n 10'
+alias ducks='du -hsx * | sort -rh | head -n 10'
 
 # for mkdir and cd directly
 mkc ()
