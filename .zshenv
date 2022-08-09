@@ -126,12 +126,12 @@ alias tg="sudo torghost"
 alias clip="xclip -sel clip"
 
 # alias for finding largest files and smallest
-function fl() {
+function lf() {
     local nsize="${1:-10}"
     du -hsx * | sort -rh | head -n "$nsize"
 }
 
-function fs() {
+function sf() {
     local nsize="${1:-10}"
     du -hsx * | sort -h | head -n "$nsize"
 }
@@ -141,14 +141,6 @@ function mkc () {
     mkdir -p -- "$1" &&
        cd -P -- "$1"
 }
-
-# git aliases
-alias gs="git status"
-alias gd="git diff"
-alias gc="git commit -m"
-alias gp="git push"
-alias gpl="git pull"
-alias ga="git add -A"
 
 # start simple server
 function server() {
