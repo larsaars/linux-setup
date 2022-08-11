@@ -125,6 +125,11 @@ alias tg="sudo torghost"
 # alias for copying to clipboard
 alias clip="xclip -sel clip"
 
+# function for killing all processes with a name searched
+function kills() {
+    kill -9 $(ps aux | grep "${1}" | grep -v grep | awk '{print $2}')
+}
+
 # alias for finding largest files and smallest
 function lf() {
     local nsize="${1:-10}"
@@ -145,7 +150,7 @@ function mkc () {
 # start simple server
 function server() {
     local port="${1:-8000}"
-    python -m SimpleHTTPServer "$port"
+    python3 -m http.server "$port"
 }
 
 # add local binaries to path
