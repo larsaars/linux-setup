@@ -126,6 +126,12 @@ alias tg="sudo torghost"
 # alias for copying to clipboard
 alias clip="xclip -sel clip"
 
+# alias
+function loadenv() {
+    local envfile="${1:-.env}"
+    export $(grep -v '^#' ${envfile} | xargs)
+}
+
 # function for killing all processes with a name searched
 function kills() {
     kill -9 $(ps aux | grep "${1}" | grep -v grep | awk '{print $2}')
