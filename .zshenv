@@ -118,6 +118,7 @@ alias wsc="windscribe connect"
 alias wsd="windscribe disconnect"
 alias cls="clear"
 alias pub="flutter pub"
+alias mkdir="mkdir -p"
 
 # use tg -s to start -x to exit -r for new route
 alias tg="sudo torghost"
