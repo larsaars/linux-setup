@@ -124,7 +124,10 @@ alias mkdir="mkdir -p"
 alias tg="sudo torghost"
 
 # alias for copying to clipboard
+# use cat file | clip to copy file to clipboard
+# or clipo > file.txt to paste clipboard to file
 alias clip="xclip -sel clip"
+alias clipo="xclip -sel clip -o"
 
 # alias
 function loadenv() {
