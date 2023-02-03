@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'KarimElghamry/vim-auto-comment'
+Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 
 Plug 'github/copilot.vim', {'branch': 'release'}
 
