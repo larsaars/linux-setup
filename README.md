@@ -47,6 +47,10 @@ Now restart the zsh (the terminal) and go back to home directory (`cd ~`). Confi
 
     :Copilot setup
     
+### setup copilot cli
+
+[link](https://www.npmjs.com/package/@githubnext/github-copilot-cli)
+    
 ### github store creds
 
      git config --global --replace-all credential.helper store
