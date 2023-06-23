@@ -32,7 +32,6 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
-
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
@@ -150,6 +149,13 @@ function sf() {
     local nsize="${1:-10}"
     du -hsx * | sort -h | head -n "$nsize"
 }
+
+# function for brightnessctls on my laptop (the first arg is the brightness percentage)
+function brt() { 
+    local brt="${1:80}"
+    sudo brightnessctl set "$1%"
+}
+
 
 # for mkdir and cd directly
 function mkc () {
