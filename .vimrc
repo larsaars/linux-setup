@@ -78,7 +78,7 @@ set autoread
 " enable autoindent
 filetype indent plugin on
 " set default indentation
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 
 " auto close brackets and quotes
