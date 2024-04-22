@@ -13,7 +13,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'KarimElghamry/vim-auto-comment'
-Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
 
 Plug 'github/copilot.vim', {'branch': 'release'}
 
@@ -205,30 +204,11 @@ nnoremap <M-k> :tabn<CR>
 nnoremap <M-l> :tabm +1 <CR>
 nnoremap <M-h> :tabm -1 <CR>
 
-" leaving easier by pressing j and k at the same time
-inoremap jk <esc>
-inoremap kj <esc>
 
-" fix pasting from other application with f2
-set pastetoggle=<F2>
-" git commands (pull, add | commit, push)
-map <F3> :!git pull <CR>
-map <F4> :!git add -A && git commit -m "
-map <F5> :!git push <CR>
 " press f8 to switch theme (with previously defined function)
 map <F8> :call ChangeTheme()<CR>
 " toggle tree on f9 or on shift+2 (which is basically ")
-map <F9> :call ToggleNetrw() <CR>
 map " :call ToggleNetrw() <CR>
-" quit with override on pressing f10
-map <F10> :q!<CR>
-
-" easier parenthesis opening
-map ä A<space>{<CR>
-" add semicolon at end of line
-map ö A;<esc>
-" easier deletion of two belonging parenthesis
-map ü mp%x`px
 
 " keys for auto commenting:
 " auto inline comment in command and in visual mode
