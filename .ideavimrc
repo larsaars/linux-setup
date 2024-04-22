@@ -20,7 +20,6 @@ set smartcase
 set smartindent
 
 " some fixes
-set relativenumber
 set number
 set highlightedyank
 set ideamarks
@@ -29,13 +28,10 @@ set commentary
 set argtextobj
 set textobj-entire
 set surround
+set clipboard+=unnamedplus  " copy to and from system clipboard
 let mapleader = ","
 
 "+++++++++++++++++++++++++++++++++ Key Bindings +++++++++++++++++++++++++++++++++"
-
-" leaving easier by pressing j and k at the same time
-inoremap jk <esc>
-inoremap kj <esc>
 
 " easier parenthesis opening
 map ä A<space>{<CR>
