@@ -113,8 +113,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # aliases i use
 alias vip="vim -p"
-alias wsc="windscribe connect"
-alias wsd="windscribe disconnect"
 alias cls="clear"
 alias pub="flutter pub"
 alias mkdir="mkdir -p"
@@ -174,6 +172,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # and other binaries
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$HOME/miniconda3/bin:$PATH"
+
+# dart executable
+export PATH="$HOME/.pub-cache/bin:$PATH"
 
 # add snapapps to the XDG_DATA_DIRS
 export XDG_DATA_DIRS="/var/lib/snapd/desktop:$XDG_DATA_DIRS"
