@@ -19,7 +19,6 @@ Plug 'github/copilot.vim', {'branch': 'release'}
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
 Plug 'pangloss/vim-javascript'
 call plug#end()
 
