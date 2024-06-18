@@ -133,16 +133,6 @@ endfunction
 
 autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag,*.java :call FormatBuffer() 
 
-" format on f6 click by keeping pointer and just calling gg=G
-function FormatButton()
-    if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
-        let cursor_pos = getpos('.')
-        gg=G
-        call setpos('.', cursor_pos)
-    endif
-endfunction
-
-
 
 " every c and cpp (and other languages) file will be formatted by the program clang-format
 " (installed)
