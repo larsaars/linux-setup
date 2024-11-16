@@ -116,9 +116,9 @@ alias vip="vim -p"
 alias cls="clear"
 alias pub="flutter pub"
 alias mkdir="mkdir -p"
+alias ls="ls --color=auto"
+alias vim="nvim"
 
-# use tg -s to start -x to exit -r for new route
-alias tg="sudo torghost"
 
 # alias for copying to clipboard
 # use cat file | clip to copy file to clipboard
@@ -152,6 +152,11 @@ function sf() {
 function brt() { 
     local brt="${1:80}"
     sudo brightnessctl set "$1%"
+}
+
+# function for opening files with the default application but no log
+function open() {
+    xdg-open "$1" > /dev/null 2>&1
 }
 
 
@@ -198,56 +203,3 @@ if [ -f ~/.last_dir ]
 fi
 
 
-################# GITHUB COPILOT CLI #################
-copilot_what-the-shell () {
-    TMPFILE=$(mktemp);
-    trap 'rm -f $TMPFILE' EXIT;
-    if $(which github-copilot-cli) what-the-shell "$@" --shellout $TMPFILE; then
-      if [ -e "$TMPFILE" ]; then
-        FIXED_CMD=$(cat $TMPFILE);
-        print -s "$FIXED_CMD";
-        eval "$FIXED_CMD"
-      else
-        echo "Apologies! Extracting command failed"
-      fi
-    else
-      return 1
-    fi
-  };
-alias '??'='copilot_what-the-shell';
-
-  copilot_git-assist () {
-    TMPFILE=$(mktemp);
-    trap 'rm -f $TMPFILE' EXIT;
-    if $(which github-copilot-cli) git-assist "$@" --shellout $TMPFILE; then
-      if [ -e "$TMPFILE" ]; then
-        FIXED_CMD=$(cat $TMPFILE);
-        print -s "$FIXED_CMD";
-        eval "$FIXED_CMD"
-      else
-        echo "Apologies! Extracting command failed"
-      fi
-    else
-      return 1
-    fi
-  };
-alias 'git?'='copilot_git-assist';
-
-  copilot_gh-assist () {
-    TMPFILE=$(mktemp);
-    trap 'rm -f $TMPFILE' EXIT;
-    if $(which github-copilot-cli) gh-assist "$@" --shellout $TMPFILE; then
-      if [ -e "$TMPFILE" ]; then
-        FIXED_CMD=$(cat $TMPFILE);
-        print -s "$FIXED_CMD";
-        eval "$FIXED_CMD"
-      else
-        echo "Apologies! Extracting command failed"
-      fi
-    else
-      return 1
-    fi
-  };
-alias 'gh?'='copilot_gh-assist';
-alias 'wts'='copilot_what-the-shell';
-################# END GITHUB COPILOT CLI #################
