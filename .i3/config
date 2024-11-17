@@ -415,3 +415,5 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+exec --no-startup-id xinput set-prop 11 "libinput Natural Scrolling Enabled" 1
