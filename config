@@ -49,7 +49,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec ~/scripts/run_i3_env.sh firefox
 bindsym $mod+Shift+n exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
