@@ -113,9 +113,6 @@ bindsym $mod+space floating toggle
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
@@ -235,7 +232,7 @@ mode "$mode_system" {
 }
 
 # set volume and music control
-bindsym $mod+t mode "$mode_volume"
+bindsym $mod+a mode "$mode_volume"
 set $mode_volume (i)nc vol, (d)ec vol, (m)ute, (n)ext, (l)ast, (p)ause
 mode "$mode_volume" {
     bindsym i exec pamixer --increase 5
