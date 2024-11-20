@@ -235,12 +235,12 @@ mode "$mode_system" {
 bindsym $mod+a mode "$mode_volume"
 set $mode_volume (i)nc vol, (d)ec vol, (m)ute, (n)ext, (l)ast, (p)ause
 mode "$mode_volume" {
-    bindsym i exec pamixer --increase 5
-    bindsym d exec pamixer --decrease 5
-    bindsym m exec pamixer --toggle-mute
-    bindsym n exec playerctl next
-    bindsym l exec playerctl previous
-    bindsym p exec playerctl play-pause
+    bindsym i exec "pamixer --increase 5; notify-send $(pamixer --get-volume)"
+    bindsym d exec "pamixer --decrease 5; notify-send $(pamixer --get-volume)"
+    bindsym m exec "pamixer --toggle-mute; notify-send $(pamixer --get-mute)", mode "default"
+    bindsym n exec "playerctl next"
+    bindsym l exec "playerctl previous"
+    bindsym p exec "playerctl play-pause", mode "default"
 
 
     # exit system mode: "Enter" or "Escape"

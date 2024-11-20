@@ -80,8 +80,6 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 
 " auto close brackets and quotes
-inoremap " ""<left>
-inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
