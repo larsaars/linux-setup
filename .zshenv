@@ -148,12 +148,6 @@ function sf() {
     du -hsx * | sort -h | head -n "$nsize"
 }
 
-# function for brightnessctls on my laptop (the first arg is the brightness percentage)
-function brt() { 
-    local brt="${1:80}"
-    sudo brightnessctl set "$1%"
-}
-
 
 # for mkdir and cd directly
 function mkc () {
