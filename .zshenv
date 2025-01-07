@@ -148,20 +148,11 @@ function sf() {
     du -hsx * | sort -h | head -n "$nsize"
 }
 
-<<<<<<< HEAD
-=======
-# function for brightnessctls on my laptop (the first arg is the brightness percentage)
-function brt() { 
-    local brt="${1:80}"
-    sudo brightnessctl set "$1%"
-}
 
 # function for opening files with the default application but no log
 function open() {
     xdg-open "$1" > /dev/null 2>&1
 }
-
->>>>>>> 34b0c39da1d228a434b572f713f9443ef035d3bf
 
 # for mkdir and cd directly
 function mkc () {
