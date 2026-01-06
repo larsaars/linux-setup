@@ -2,6 +2,8 @@
 " REPOSITORY: https://github.com/larsaars/linux-setup
 
 
+" tell nvim where python is!
+let g:python3_host_prog = '~/miniforge3/bin/python'
 
 "+++++++++++++++++++++++++++++++++ Load Plugins +++++++++++++++++++++++++++++++++"
 
@@ -17,7 +19,6 @@ Plug 'KarimElghamry/vim-auto-comment'
 Plug 'github/copilot.vim', {'branch': 'release'}
 
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 call plug#end()
@@ -80,6 +81,8 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 
 " auto close brackets and quotes
+inoremap " ""<left>
+inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
