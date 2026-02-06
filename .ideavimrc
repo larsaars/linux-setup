@@ -33,16 +33,6 @@ let mapleader = ","
 
 "+++++++++++++++++++++++++++++++++ Key Bindings +++++++++++++++++++++++++++++++++"
 
-" easier parenthesis opening
-map ä A<space>{<CR>
-" add semicolon at end of line
-map ö A;<esc>
-" easier deletion of two belonging parenthesis
-map ü mp%x`px
-
-" remap minus in command mode to put a newline below
-noremap - mpo<esc>`p
-
 
 " These are leader-based alternative shortcuts for actions whose corresponding
 " idea shortcuts require hand-stretching combinations, function keys, Home or

@@ -79,14 +79,6 @@ filetype indent plugin on
 " set default indentation
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-
-" auto close brackets and quotes
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-
 " Skipping over closing brackets and quotes
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
