@@ -79,12 +79,6 @@ filetype indent plugin on
 " set default indentation
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-" Skipping over closing brackets and quotes
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
-inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
 
 " when brace + enter is pressed automatically add indent correctly and add
 " missing brace
